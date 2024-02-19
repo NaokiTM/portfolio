@@ -10,12 +10,14 @@ function App() {
 
   return (
      <>
-       <Navbar />
-       <Hero />
-       <Qualifications />
-       <Projects />
-       <Contact />
-       <Footer />
+        <div className = "before::bg-image">
+          <Navbar />
+          <Hero />
+          <Qualifications />
+          <Projects />
+          <Contact />
+          <Footer />
+        </div>
      </>
   );
 }
