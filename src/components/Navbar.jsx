@@ -12,7 +12,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className = 'text-white flex items-center justify-end mx-auto px-6 font-mono'>
+    <div className = 'text-white flex items-center justify-end mx-auto px-6 font-mono relative z-10'>
       {isMobile ? (
         <>
           <div className='w-full p-6 md:hidden' onClick={handleNav}>
@@ -35,7 +35,7 @@ const Navbar = () => {
       ) : (
 
         <>
-          <div className='w-full p-6 md:hidden' onClick={handleNav}>
+          <div className='w-full p-6 md:hidden hover:cursor-pointer' onClick={handleNav}>
             {nav ? <IoMdCloseCircleOutline className = 'p-4' size = {25} />  :  <BiMenuAltLeft className = 'p-4' size = {25} /> }
           </div>
 

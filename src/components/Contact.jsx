@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div className = 'text-black bg-white '>
+    <div className = 'text-black bg-white relative z-10 '>
     <div className = 'p-4 font-mono justify-center flex text-2xl'>Contact Me!</div>
           <div className = ' p-5 flex justify-center'>
             <input

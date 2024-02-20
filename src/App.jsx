@@ -10,13 +10,13 @@ function App() {
 
   return (
      <>
-        <div className = "before::bg-image">
-          <Navbar />
-          <Hero />
-          <Qualifications />
-          <Projects />
-          <Contact />
-          <Footer />
+        <div className = "bg-image">  
+              <Navbar />
+              <Hero />
+              <Qualifications />
+              <Projects />
+              <Contact />
+              <Footer />
         </div>
      </>
   );
