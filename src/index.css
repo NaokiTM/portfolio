@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body {
-  background-size: cover;
-  background-color: black;
-} */
-
-
 .bg-image::before {
   content:"";
   background-repeat: no-repeat;
@@ -19,7 +13,7 @@
   left:0;
   right:0;
   bottom:0;
-  filter: brightness(40%)
+  filter: brightness(20%)
 }
 
 

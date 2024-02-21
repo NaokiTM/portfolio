@@ -10,7 +10,7 @@ function App() {
 
   return (
      <>
-        <div className = "bg-image">  
+        <div className = "bg-image font-light font-sans">  
               <Navbar />
               <Hero />
               <Qualifications />

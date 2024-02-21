@@ -12,7 +12,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className = 'text-white flex items-center justify-end mx-auto px-6 font-mono relative z-10'>
+    <div className = 'text-white flex items-center justify-end mx-auto px-6 relative z-10'>
       {isMobile ? (
         <>
           <div className='w-full p-6 md:hidden' onClick={handleNav}>
