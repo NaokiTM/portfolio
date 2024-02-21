@@ -2,23 +2,23 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div className = 'text-black bg-white '>
+    <div className = 'text-black bg-white font-mono'>
 
-    <div className = 'p-4 font-sans justify-center flex text-2xl'>Contact Me!</div>
+    <div className = 'p-4 justify-center flex text-2xl'>Contact Me!</div>
     
           <div className = 'p-5 grid gap-3 items-center w-[100%]'>
             <input
-              className = 'p-3 w-[100%] bg-white border-black border-2 rounded-md  text-black placeholder-black font-sans'
+              className = 'p-3 w-[100%] bg-white border-black border-2 rounded-md  text-black placeholder-black '
               type = 'text'
               placeholder = 'Name:'
             />
             <input
-              className = 'p-3 w-[100%] bg-white border-black border-2 rounded-md  text-black placeholder-black font-sans'
+              className = 'p-3 w-[100%] bg-white border-black border-2 rounded-md  text-black placeholder-black '
               type = 'email'
               placeholder = 'Email:'
             />
             <input 
-              className = 'p-3 w-[100%] bg-white border-black border-2 rounded-md  text-black placeholder-black font-sans'
+              className = 'p-3 w-[100%] bg-white border-black border-2 rounded-md  text-black placeholder-black '
               type = 'text'
               placeholder='Message:'
             />
