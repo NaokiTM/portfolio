@@ -17,4 +17,27 @@
 }
 
 
+.text {
+  animation: text 10s linear infinite;
+}
+
+@keyframes text {
+  0% {
+      color: red;
+  }
+
+  25% {
+      color: lime;
+  }
+
+  75% {
+      color: blue;
+  }
+
+  100% {
+      color: red
+  }
+}
+
+
 
