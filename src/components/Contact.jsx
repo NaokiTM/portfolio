@@ -6,19 +6,19 @@ const Contact = () => {
 
     <div className = 'p-4 justify-center flex text-2xl'>Contact Me!</div>
     
-          <div className = 'p-5 grid gap-3 items-center w-[100%]'>
+          <div className = 'pl-[25%] p-5 grid gap-3 items-center w-[100%]'>
             <input
-              className = 'p-3 w-[100%] bg-white border-black border-2 rounded-md  text-black placeholder-black '
+              className = 'p-3 w-[70%] bg-white border-black border-2 rounded-md  text-black placeholder-black '
               type = 'text'
               placeholder = 'Name:'
             />
             <input
-              className = 'p-3 w-[100%] bg-white border-black border-2 rounded-md  text-black placeholder-black '
+              className = 'p-3 w-[70%] bg-white border-black border-2 rounded-md  text-black placeholder-black '
               type = 'email'
               placeholder = 'Email:'
             />
             <input 
-              className = 'p-3 w-[100%] bg-white border-black border-2 rounded-md  text-black placeholder-black '
+              className = 'p-3 w-[70%] bg-white border-black border-2 rounded-md  text-black placeholder-black '
               type = 'text'
               placeholder='Message:'
             />
