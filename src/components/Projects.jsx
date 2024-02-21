@@ -21,7 +21,7 @@ const Projects = () => {
                 <p className='py-2 border-b mx-8'>The site you are on right Now!</p>
                 <p className='py-2 border-b mx-8'>Made using ReactJS and Tailwind CSS</p>
             </div>
-            <button className='bg-black text-[#9700FF] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3'>Github Repo</button>
+              <button className='bg-black text w-[200px] rounded-md font-mono my-6 mx-auto px-6 py-3'>Github Repo</button>
         </div>
 
 
@@ -33,7 +33,7 @@ const Projects = () => {
                 <p className='py-2 border-b mx-8 '>Made for a course module</p>
                 <p className='py-2 border-b mx-8'>Made using Arduino C</p>
             </div>
-            <button className='bg-black text-[#9700FF] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3'>Github Repo</button>
+            <button className='bg-black text w-[200px] rounded-md font-mono my-6 mx-auto px-6 py-3'>Github Repo</button>
         </div>
 
 
@@ -45,7 +45,7 @@ const Projects = () => {
                 <p className='py-2 border-b mx-8 '>Solves the Knights tour puzzle, and lets the user play the puzzle interactively</p>
                 <p className='py-2 border-b mx-8'>made using Python, Pygame</p>
             </div>
-            <button className='bg-black text-[#9700FF] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3'>Github Repo</button>
+            <button className='bg-black text w-[200px] rounded-md font-mono my-6 mx-auto px-6 py-3'>Github Repo</button>
         </div>
 
 
