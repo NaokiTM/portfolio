@@ -11,7 +11,7 @@ const Projects = () => {
     //     <div className="text-3xl font-mono flex p-6">Projects:</div>
     //   </div>
     // </div>
-    <div className='w-full px-6 bg-black'>
+    <div className='w-full px-6 text-black'>
       <div className='text'>
         <div className="text-3xl pt-6">Projects</div>
       </div>

@@ -24,7 +24,7 @@ const Contact = () => {
             />
           </div>
       <div className='justify-center flex' >
-        <button className='bg-[#FF0000] text-black rounded-3xl border-2 w-[200px] ml-4 my-6 px-6 py-3'>
+        <button formAction='' className='bg-[#FF0000] text-black rounded-3xl border-2 w-[200px] ml-4 my-6 px-6 py-3'>
             Send Message
         </button>
       </div>
