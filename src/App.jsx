@@ -29,7 +29,7 @@ function App() {
           <div>宜</div>
         </div>
       ) : (
-        <div className = "bg-image bg-black text-white font-light font-mono"> 
+        <div className = "bg-gray-200 bg-image text-white font-light font-mono"> 
           <Hero /> 
           <Qualifications />
           <Projects />

@@ -31,13 +31,15 @@
   background-size: cover;
   background-position: center;
   background-image: url("../src/assets/background.jpg");
-  position: absolute;
+  position: fixed;
   top:0;
   left:0;
   right:0;
   bottom:0;
-  filter: brightness(30%)
+  filter: brightness(30%);
 }
+
+
 
 
 @keyframes fadeText {

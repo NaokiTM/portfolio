@@ -6,17 +6,13 @@ import knightsTourImage from '../assets/knights-tour-image.png'
 
 const Projects = () => {
   return (
-    // <div className='text-white bg-black relative h-screen'>
-    //   <div className='text'>
-    //     <div className="text-3xl font-mono flex p-6">Projects:</div>
-    //   </div>
-    // </div>
-    <div className='relative w-full px-6 text-black'>
+    <div className='relative p-6 text-black'>
+
       <div className='text'>
         <div className="text-3xl pt-6">Projects</div>
       </div>
-      <div className='max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8 py-[5rem]'>
 
+      <div className='max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8 py-[5rem]'>
 
         <div className='w-full shadow-xl bg-gray-100 flex flex-col p-4 md:my-0 my-8 rounded-lg hover:scale-105 duration-300'>
             <img className='w-20 mx-auto mt-[-3rem] bg-transparent' src={portfolioImage} alt="/" />
@@ -53,8 +49,8 @@ const Projects = () => {
         </div>
 
 
+      </div>
     </div>
-  </div>
   )
 }
 
