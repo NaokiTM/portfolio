@@ -2,10 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'sfSemibold';
+  src: url('../src/assets/SanFranciscoDisplay-Semibold.otf') format('truetype');
+}
+
+.sfsemibold {
+  font-family: 'sfSemibold', monospace;
+}
+
+@font-face {
+  font-family: 'jpfont';
+  src: url('../src/assets/NotoSerifJP-Black.otf') format('truetype');
+}
+
+.jpFont {
+  font-family: 'jpfont', monospace;
+}
+
+
+
+
+
+
 .bg-image::before {
   content:"";
   background-repeat: no-repeat;
-  background-size: fill;
+  background-size: cover;
   background-position: center;
   background-image: url("../src/assets/background.jpg");
   position: absolute;
@@ -13,7 +36,7 @@
   left:0;
   right:0;
   bottom:0;
-  filter: brightness(20%)
+  filter: brightness(30%)
 }
 
 

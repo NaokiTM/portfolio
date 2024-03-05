@@ -1,5 +1,8 @@
 import './index.css';
 import Qualifications from './components/Qualifications';
+import React, { useState, useEffect } from 'react';
+
+
 import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
@@ -7,16 +10,33 @@ import Contact from './components/Contact';
 
 function App() {
 
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    const delay = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000); // Adjust the time as needed (in milliseconds)
+
+    return () => clearTimeout(delay); //prevents memory leaks
+  }, []);
+
   return (
      <>
-       {/* add bg-image class to enable transparent bg image */}
-        <div className = "bg-black text-white font-light font-mono">  
-              <Hero />
-              <Qualifications />
-              <Projects />
-              <Contact />
-              <Footer />
+      {isLoading ?  (
+        <div className='fadeText flex justify-center items-center flex-col h-screen text-9xl jpFont'>
+          <div>宮</div>
+          <div>川</div>
+          <div>直</div>
+          <div>宜</div>
         </div>
+      ) : (
+        <div className = "bg-image bg-black text-white font-light font-mono"> 
+          <Hero /> 
+          <Qualifications />
+          <Projects />
+          <Contact />
+          <Footer />
+        </div>
+      )} 
      </>
   );
 }

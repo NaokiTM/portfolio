@@ -3,20 +3,19 @@ import { ReactTyped } from 'react-typed'
 
 const Hero = () => {
   return (
-    <div className = " relative font-mono">
-      <div className = 'max-w-[800px] mt-[-96px] w-full h-screen mx-auto text-center flex flex-col justify-center'>
-        <div className = 'flex justify-center items-center'>
+    <div className = "relative sfsemibold">
+      <div className ='pt-4' >
           <ReactTyped
-            className='md:text-9xl sm:text-6xl text-xl md:pl-4 pl-2'
-            strings={['Naoki Miyagawa', 'CS student']}
-            typeSpeed={100}
-            backSpeed={90}
+            className='text-8xl pl-6'
+            strings={['NAOKI MIYAGAWA', 'CS STUDENT.']}
+            typeSpeed={70}
+            backSpeed={50}
             loop
           />
         </div>
-      </div>
     </div>
   )
 }
 
 export default Hero
+// 宮川 直宜
