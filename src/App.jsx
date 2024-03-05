@@ -10,7 +10,8 @@ function App() {
 
   return (
      <>
-        <div className = "bg-image font-light font-sans">  
+       {/* add bg-image class to enable transparent bg image */}
+        <div className = "bg-black text-white font-light font-mono">  
               <Navbar />
               <Hero />
               <Qualifications />

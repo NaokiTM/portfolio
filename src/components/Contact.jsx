@@ -2,9 +2,9 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div className = 'text-black bg-white font-mono'>
+    <div className = 'text-black bg-white font-sans'>
 
-    <div className = 'p-4 justify-center flex text-2xl'>Contact Me!</div>
+    <div className = 'p-4 justify-center flex text-2xl font-bold'>Contact Me</div>
     
           <div className = 'pl-[25%] p-5 grid gap-3 items-center w-[100%]'>
             <input

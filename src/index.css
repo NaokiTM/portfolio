@@ -7,7 +7,7 @@
   background-repeat: no-repeat;
   background-size: fill;
   background-position: center;
-  background-image: url("../src/background.jpg");
+  background-image: url("../src/assets/background.jpg");
   position: absolute;
   top:0;
   left:0;
@@ -17,9 +17,26 @@
 }
 
 
+@keyframes fadeText {
+  0% {
+    opacity: 0;
+    transform: translateY(10px), scale(0.9);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateY(10px), scale(1);
+  }
+}
+
 .text {
   animation: text 10s linear infinite;
 }
+
+.fadeText {
+  animation: fadeText 3s linear forwards;
+}
+
 
 @keyframes text {
   0% {
@@ -37,6 +54,13 @@
   100% {
       color: red
   }
+
+
+}
+
+@font-face {
+  font-family: 'SF Mono';
+  src: local('SF Mono'), local('SFMono-Regular'); /* Add URL if necessary */
 }
 
 
