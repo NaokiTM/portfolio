@@ -7,7 +7,7 @@ const Hero = () => {
       <div className ='pt-4' >
           <ReactTyped
             className='text-8xl pl-6'
-            strings={['NAOKI MIYAGAWA', 'CS STUDENT.']}
+            strings={['宮川 直宜', 'NAOKI MIYAGAWA', 'CS STUDENT.']}
             typeSpeed={70}
             backSpeed={50}
             loop

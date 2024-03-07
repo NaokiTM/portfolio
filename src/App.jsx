@@ -21,24 +21,21 @@ function App() {
 
   return (
      <>
-      {isLoading ?  (
-        <div className='fadeText flex justify-center items-center flex-col h-screen text-9xl jpFont'>
-          <div>宮</div>
-          <div>川</div>
-          <div>直</div>
-          <div>宜</div>
-        </div>
-      ) : (
         <div className = "bg-gray-200 bg-image text-white font-light font-mono"> 
-          <Hero /> 
+          <Hero />
           <Qualifications />
           <Projects />
           <Contact />
           <Footer />
         </div>
-      )} 
      </>
   );
 }
 
 export default App;
+{/* <div className='fadeText flex justify-center items-center flex-col h-screen text-9xl jpFont'>
+<div>宮</div>
+<div>川</div>
+<div>直</div>
+<div>宜</div>
+</div> */}
