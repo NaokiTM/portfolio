@@ -44,7 +44,7 @@ const Projects = () => {
                 <p className='py-2 border-b mx-8 '>Solves the Knights tour puzzle</p>
                 <p className='py-2 border-b mx-8'>made using Python, Pygame</p>
             </div>
-            <button className='bg-black text w-[200px] rounded-md my-6 mx-auto px-6 py-3' onClick>Github Repo</button>
+            <button className='bg-black text w-[200px] rounded-md my-6 mx-auto px-6 py-3'>Github Repo</button>
         </div>
 
 

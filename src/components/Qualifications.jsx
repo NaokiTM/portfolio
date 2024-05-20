@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import { ReactTyped } from 'react-typed'
-
 
 
 const Qualifications = () => {
@@ -29,12 +28,19 @@ const Qualifications = () => {
 
   return (
     <div className='text-white relative w-full p-6 text-large '>
-      <ReactTyped
-        strings={text[currentLine]}
-        typeSpeed={70}
-        loop = {false}
-        onComplete = {incrementLine}
-      />
+      <div>//GCSE//</div>
+      <div>Geography: 7</div>
+      <div>Computer science: 7</div>
+      <div>Maths: 7</div> 
+      <div>English Literature: 6</div>
+      <div>English Language: 6</div>
+      <div>Business studies: 6</div> 
+      <div>Music: 6</div> 
+      <div>// A LEVEL //</div>
+      <div> AS Music: B</div>
+      <div> Geography: C</div>
+      <div>Maths: D</div>
+      <div>Computer Science: D</div>
     </div>
 
   )
