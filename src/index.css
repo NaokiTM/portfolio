@@ -3,44 +3,36 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'sfSemibold';
-  src: url('../src/assets/SanFranciscoDisplay-Semibold.otf') format('truetype');
+  font-family: "sfSemibold";
+  src: url("../src/assets/SanFranciscoDisplay-Semibold.otf") format("truetype");
 }
 
 .sfsemibold {
-  font-family: 'sfSemibold', monospace;
+  font-family: "sfSemibold", monospace;
 }
 
 @font-face {
-  font-family: 'jpfont';
-  src: url('../src/assets/NotoSerifJP-Black.otf') format('truetype');
+  font-family: "jpfont";
+  src: url("../src/assets/NotoSerifJP-Black.otf") format("truetype");
 }
 
 .jpFont {
-  font-family: 'jpfont', monospace;
+  font-family: "jpfont", monospace;
 }
 
-
-
-
-
-
 .bg-image::before {
-  content:"";
+  content: "";
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-image: url("../src/assets/background.jpg");
   position: fixed;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   filter: brightness(15%);
 }
-
-
-
 
 @keyframes fadeText {
   0% {
@@ -62,31 +54,25 @@
   animation: fadeText 3s linear forwards;
 }
 
-
 @keyframes text {
   0% {
-      color: red;
+    color: red;
   }
 
   25% {
-      color: lime;
+    color: lime;
   }
 
   75% {
-      color: blue;
+    color: blue;
   }
 
   100% {
-      color: red
+    color: red;
   }
-
-
 }
 
 @font-face {
-  font-family: 'SF Mono';
-  src: local('SF Mono'), local('SFMono-Regular'); /* Add URL if necessary */
+  font-family: "SF Mono";
+  src: local("SF Mono"), local("SFMono-Regular"); /* Add URL if necessary */
 }
-
-
-

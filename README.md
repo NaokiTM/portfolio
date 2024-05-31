@@ -13,7 +13,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 If command npm start doesn't work, try running:
 
-### `npm install` 
+### `npm install`
 
 to install any missing dependencies.
 
