@@ -11,8 +11,8 @@ function App() {
     <>
       <div className="bg-image bg-gray-200 font-mono font-light text-white">
         <Hero />
-        <Qualifications />
         <Projects />
+        <Qualifications />
         <Contact />
         <Footer />
       </div>

@@ -1,67 +1,65 @@
-import React from "react";
 import portfolioImage from "../assets/portfolio-image.png";
 import gameImage from "../assets/game.jpg";
 import knightsTourImage from "../assets/knights-tour-image.png";
+import React, { useState } from 'react';
 
 const Projects = () => {
+  const handleButtonClick = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
+  const [hovered1, changeHoverState1] = useState(false);
+  const [hovered2, changeHoverState2] = useState(false);
+  const [hovered3, changeHoverState3] = useState(false);
+
   return (
-    <div className="relative p-6 text-white">
-      <div className="pt-6 text-3xl text-white">Projects</div>
+    <div className = "relative text-white">
+      <div className = " mx-auto grid md:grid-cols-3" style={{ height: 'calc(100vw / 3)' }}>
 
-      <div className="mx-auto grid max-w-[1240px] gap-8 py-[5rem] md:grid-cols-3">
-        <div className="my-8 flex w-full flex-col rounded-lg p-4 shadow-xl shadow-white duration-300 hover:scale-105 md:my-0">
-          <img
-            className="w-50 h-50 mx-auto mt-[-3rem] bg-transparent"
-            src={portfolioImage}
-            alt="/"
-          />
-          <h2 className="py-8 text-center text-2xl font-bold">
-            Portfolio Site
-          </h2>
-          <div className="text-center font-medium">
-            <p className="mx-8 border-b py-2">The site you are on right Now!</p>
-            <p className="mx-8 border-b py-2">
-              Made using React and Tailwind CSS
-            </p>
-          </div>
-          <button className="text mx-auto my-6 w-[200px] rounded-md bg-black px-6 py-3">
-            Github Repo
-          </button>
+      {/* portfolio card */}
+      <div className = "relative overflow-hidden" 
+      onMouseEnter={() => changeHoverState1(true)} onMouseLeave={() => changeHoverState1(false)}> 
+        <img
+          className={`absolute inset-0 w-full height-full mx-auto bg-transparent object-cover ${hovered1 ? 'opacity-0' : 'opacity-100'}`}
+          src={portfolioImage}
+          alt="/"
+        />
+        <div className = {`absolute inset-0 flex items-center justify-center bg-black text-center transition-opacity duration-300 ${!hovered1 ? 'opacity-0' : 'opacity-100'}`}>
+          PORTFOLIO SITE.
+          <button>Github</button>
         </div>
+      </div>
 
-        <div className="my-8 flex w-full flex-col rounded-lg p-4 shadow-xl shadow-white duration-300 hover:scale-105 md:my-0">
-          <img
-            className="w-50 h-50 mx-auto mt-[-3rem] bg-transparent"
-            src={gameImage}
-            alt="/"
-          />
-          <h2 className="py-8 text-center text-2xl font-bold">Obstacle game</h2>
-          <div className="text-center font-medium">
-            <p className="mx-8 border-b py-2">Made for a course module</p>
-            <p className="mx-8 border-b py-2">Made using Arduino C</p>
-          </div>
-          <button className="text mx-auto my-6 w-[200px] rounded-md bg-black px-6 py-3">
-            Github Repo
-          </button>
+      {/* obstacle game card*/}
+      <div className = "relative overflow-hidden" 
+      onMouseEnter={() => changeHoverState2(true)} onMouseLeave={() => changeHoverState2(false)}> 
+        <img
+          className={`absolute inset-0 w-full height-full mx-auto bg-transparent object-cover ${hovered2 ? 'opacity-0' : 'opacity-100'}`}
+          src={gameImage}
+          alt="/"
+        />
+        <div className = {`absolute inset-0 flex items-center justify-center bg-black text-center transition-opacity duration-300 ${!hovered2 ? 'opacity-0' : 'opacity-100'}`}>
+          ARDUINO OBSTACLE GAME.
+          <button>Github</button>
         </div>
+      </div>
 
-        <div className="my-8 flex w-full flex-col rounded-lg p-4 shadow-xl shadow-white duration-300 hover:scale-105 md:my-0">
-          <img
-            className="w-50 h-50mx-auto mt-[-3rem] bg-transparent"
-            src={knightsTourImage}
-            alt="/"
-          />
-          <h2 className="py-8 text-center text-2xl font-bold">
-            Knights tour solver
-          </h2>
-          <div className="text-center font-medium">
-            <p className="mx-8 border-b py-2">Solves the Knights tour puzzle</p>
-            <p className="mx-8 border-b py-2">made using Python, Pygame</p>
-          </div>
-          <button className="text mx-auto my-6 w-[200px] rounded-md bg-black px-6 py-3">
-            Github Repo
-          </button>
+      {/* chess puzzle card*/}
+      <div className = "relative overflow-hidden" 
+      onMouseEnter={() => changeHoverState3(true)} onMouseLeave={() => changeHoverState3(false)}> 
+        <img
+          className={`absolute inset-0 w-full height-full mx-auto bg-transparent object-cover ${hovered3 ? 'opacity-0' : 'opacity-100'}`}
+          src={knightsTourImage}
+          alt="/"
+        />
+        <div className = {`absolute inset-0 flex items-center justify-center bg-black text-center transition-opacity duration-300 ${!hovered3 ? 'opacity-0' : 'opacity-100'}`}>
+          KNIGHTS TOUR SIMULATOR.
+          <button>Github</button>
         </div>
+      </div>
+
+
+
       </div>
     </div>
   );
