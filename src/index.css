@@ -3,21 +3,17 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "sfSemibold";
-  src: url("../src/assets/SanFranciscoDisplay-Semibold.otf") format("truetype");
+  font-family: "importFont";
+  src: url("../src/assets/Urbanist-Italic-VariableFont_wght.ttf") format("truetype");
+}
+.importFont {
+  font-family: "importFont", monospace;
+  font-weight: 600;
 }
 
-.sfsemibold {
-  font-family: "sfSemibold", monospace;
-}
-
-@font-face {
-  font-family: "jpfont";
-  src: url("../src/assets/NotoSerifJP-Black.otf") format("truetype");
-}
-
-.jpFont {
-  font-family: "jpfont", monospace;
+.favicon {
+  width: 32px; /* Set width to 16 pixels */
+  height: 32px; /* Set height to 16 pixels */
 }
 
 .bg-image::before {
@@ -34,27 +30,63 @@
   filter: brightness(15%);
 }
 
-@keyframes fadeText {
-  0% {
-    opacity: 0;
-    transform: translateY(10px), scale(0.9);
+.up {
+  animation: up 10s linear;
+}
+
+.down {
+  animation: down 10s linear;
+}
+
+.rgb {
+  animation: rgb 10s infinite;
+}
+
+
+
+@keyframes up {
+  0%, 100% {
+    transform: translateY(300%);
+    animation-timing-function: ease-in-out;
   }
-
-  100% {
-    opacity: 100%;
-    transform: translateY(10px), scale(1);
+  25% {
+    transform: translateY(0);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    transform: translateY(-300%);
+    animation-timing-function: ease-in-out;
+  }
+  75% {
+    transform: translateY(0);
+    animation-timing-function: ease-in-out;
   }
 }
 
-.text {
-  animation: text 10s linear infinite;
+@keyframes down {
+  0%, 100% {
+    transform: translateY(-300%);
+    animation-timing-function: ease-in-out;
+  }
+  25% {
+    transform: translateY(0);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    transform: translateY(300%);
+    animation-timing-function: ease-in-out;
+  }
+  75% {
+    transform: translateY(0);
+    animation-timing-function: ease-in-out;
+  }
 }
 
-.fadeText {
-  animation: fadeText 3s linear forwards;
-}
 
-@keyframes text {
+
+
+
+@keyframes rgb {
   0% {
     color: red;
   }

@@ -27,7 +27,7 @@ const Qualifications = () => {
   };
 
   return (
-    <div className="text-large relative w-full p-6 text-white">
+    <div className="text-large importFont relative w-full p-6 text-white">
       <div>//GCSE//</div>
       <div>Geography: 7</div>
       <div>Computer science: 7</div>
