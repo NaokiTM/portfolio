@@ -4,6 +4,7 @@ import knightsTourImage from "../assets/knights-tour-image.png";
 import githubLogo from "../assets/github.png"
 import React, { useState } from 'react';
 import DeviceDetector from "./DeviceDetector";
+import projects from "../assets/projects.jpg"
 
 
 const Projects = () => {
@@ -19,6 +20,9 @@ const Projects = () => {
 
   return (
     <div className = "relative text-white">
+      <div className="w-[50vw] pb-2 pl-1">
+        <img src = {projects}></img>
+      </div>
       <div className = {`mx-auto grid ${isMobile ? 'grid-cols-2' : 'grid-cols-3'}`}>
 
         {/* portfolio card */}
@@ -62,52 +66,6 @@ const Projects = () => {
             <img className = "favicon cursor-pointer" src = {githubLogo} onClick={() => handleButtonClick('https://github.com/NaokiTM/knights-tour')}></img>
           </div>
         </div>
-
-
-        {/* proj4*/}
-        <div className = "relative overflow-hidden" style={{ height: 'calc(100vw / 3)' }}
-        onMouseEnter={() => changeHoverState3(true)} onMouseLeave={() => changeHoverState3(false)}> 
-          <img
-            className={`absolute inset-0 w-full height-full mx-auto bg-transparent object-cover ${hovered3 ? 'opacity-0' : 'opacity-100'}}`}
-            src={knightsTourImage}
-            alt="/"
-          />
-          <div className = {`absolute inset-0 flex flex-col items-center justify-center bg-black text-center transition-opacity duration-300 ${!hovered3 ? 'opacity-0' : 'opacity-100'}`}>
-            <p>KNIGHTS TOUR SIMULATOR.</p>
-            <img className = "favicon cursor-pointer" src = {githubLogo} onClick={() => handleButtonClick('https://github.com/NaokiTM/knights-tour')}></img>
-          </div>
-        </div>
-
-
-        {/* proj5*/}
-        <div className = "relative overflow-hidden" style={{ height: 'calc(100vw / 3)' }}
-        onMouseEnter={() => changeHoverState3(true)} onMouseLeave={() => changeHoverState3(false)}> 
-          <img
-            className={`absolute inset-0 w-full height-full mx-auto bg-transparent object-cover ${hovered3 ? 'opacity-0' : 'opacity-100'}}`}
-            src={knightsTourImage}
-            alt="/"
-          />
-          <div className = {`absolute inset-0 flex flex-col items-center justify-center bg-black text-center transition-opacity duration-300 ${!hovered3 ? 'opacity-0' : 'opacity-100'}`}>
-            <p>KNIGHTS TOUR SIMULATOR.</p>
-            <img className = "favicon cursor-pointer" src = {githubLogo} onClick={() => handleButtonClick('https://github.com/NaokiTM/knights-tour')}></img>
-          </div>
-        </div>
-
-
-        {/* proj6*/}
-        <div className = "relative overflow-hidden" style={{ height: 'calc(100vw / 3)' }}
-        onMouseEnter={() => changeHoverState3(true)} onMouseLeave={() => changeHoverState3(false)}> 
-          <img
-            className={`absolute inset-0 w-full height-full mx-auto bg-transparent object-cover ${hovered3 ? 'opacity-0' : 'opacity-100'}}`}
-            src={knightsTourImage}
-            alt="/"
-          />
-          <div className = {`absolute inset-0 flex flex-col items-center justify-center bg-black text-center transition-opacity duration-300 ${!hovered3 ? 'opacity-0' : 'opacity-100'}`}>
-            <p>KNIGHTS TOUR SIMULATOR.</p>
-            <img className = "favicon cursor-pointer" src = {githubLogo} onClick={() => handleButtonClick('https://github.com/NaokiTM/knights-tour')}></img>
-          </div>
-        </div>
-
 
 
       </div>

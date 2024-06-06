@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-image font-mono text-white">
+      <div className="font-mono text-white bg-black">
         <Hero />
         <div className="relative grid md:columns-2">
             <Bio />
