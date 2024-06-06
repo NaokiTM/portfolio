@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.f3296248.css",
+    "main.js": "/portfolio/static/js/main.6a7fd44b.js",
+    "static/js/453.534db5b8.chunk.js": "/portfolio/static/js/453.534db5b8.chunk.js",
+    "static/media/jupiter.JPG": "/portfolio/static/media/jupiter.75feef9689051fd1bf89.JPG",
+    "static/media/portfolio-image.png": "/portfolio/static/media/portfolio-image.3b64c38afe8434a07709.png",
+    "static/media/game.jpg": "/portfolio/static/media/game.d3851538545655246704.jpg",
+    "static/media/logo.jpg": "/portfolio/static/media/logo.384dbc85588dc798efc7.jpg",
+    "static/media/projects.jpg": "/portfolio/static/media/projects.891d408ba46a49019ebb.jpg",
+    "static/media/contact.jpg": "/portfolio/static/media/contact.c9193fc02a05b11f371d.jpg",
+    "static/media/skills.jpg": "/portfolio/static/media/skills.ab769f53addc85af19b6.jpg",
+    "static/media/github.png": "/portfolio/static/media/github.6fdc80f1a5d385046460.png",
+    "index.html": "/portfolio/index.html",
+    "main.f3296248.css.map": "/portfolio/static/css/main.f3296248.css.map",
+    "main.6a7fd44b.js.map": "/portfolio/static/js/main.6a7fd44b.js.map",
+    "453.534db5b8.chunk.js.map": "/portfolio/static/js/453.534db5b8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f3296248.css",
+    "static/js/main.6a7fd44b.js"
+  ]
+}
