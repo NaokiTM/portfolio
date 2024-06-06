@@ -19,7 +19,7 @@ const Projects = () => {
 
   return (
     <div className = "relative text-white">
-      <div className = {`mx-auto ${isMobile ? 'md:grid-cols-2 md: grid-cols-3' : 'md:grid-cols-3 md:grid-rows-2'}`}>
+      <div className = {`mx-auto grid ${isMobile ? 'grid-cols-2' : 'grid-cols-3'}`}>
 
         {/* portfolio card */}
         <div className = "relative overflow-hidden " style={{ height: 'calc(100vw / 3)' }}

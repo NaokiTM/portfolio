@@ -8,7 +8,7 @@
 }
 .importFont {
   font-family: "importFont", monospace;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .favicon {
@@ -31,15 +31,27 @@
 }
 
 .up {
-  animation: up 10s linear;
+  animation: up 10s infinite;
 }
 
 .down {
-  animation: down 10s linear;
+  animation: down 10s infinite;
+}
+
+.left {
+  animation: fromLeft 10s infinite;
+}
+
+.right {
+  animation: fromRight 10s infinite;
 }
 
 .rgb {
   animation: rgb 10s infinite;
+}
+
+.width {
+  width: 50vw;
 }
 
 
@@ -81,6 +93,47 @@
     animation-timing-function: ease-in-out;
   }
 }
+
+@keyframes fromLeft {
+  0%, 100% {
+    transform: translateX(-3000%);
+    animation-timing-function: ease-in-out;
+  }
+  25% {
+    transform: translateX(0);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    transform: translateX(3000%);
+    animation-timing-function: ease-in-out;
+  }
+  75% {
+    transform: translateX(0);
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@keyframes fromRight {
+  0%, 100% {
+    transform: translateX(5000%);
+    animation-timing-function: ease-in-out;
+  }
+  25% {
+    transform: translateX(0);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    transform: translateX(-5000%);
+    animation-timing-function: ease-in-out;
+  }
+  75% {
+    transform: translateX(0);
+    animation-timing-function: ease-in-out;
+  }
+
+}
+
+
 
 
 
