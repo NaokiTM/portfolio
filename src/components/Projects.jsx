@@ -3,7 +3,6 @@ import gameImage from "../assets/game.jpg";
 import knightsTourImage from "../assets/knights-tour-image.png";
 import githubLogo from "../assets/github.png"
 import React, { useState } from 'react';
-import DeviceDetector from "./DeviceDetector";
 import projects from "../assets/projects.jpg"
 
 
@@ -16,14 +15,12 @@ const Projects = () => {
   const [hovered2, changeHoverState2] = useState(false);
   const [hovered3, changeHoverState3] = useState(false);
 
-  const isMobile = DeviceDetector();
-
   return (
     <div className = "relative text-white">
-      <div className="w-[50vw] pb-2 pl-1">
+      <div className="md:w-[50vw] sm:w-[100vw] pb-2 pl-1">
         <img src = {projects}></img>
       </div>
-      <div className = {`mx-auto grid ${isMobile ? 'grid-cols-2' : 'grid-cols-3'}`}>
+      <div className = "mx-auto grid sm:grid-cols-1 md:grid-cols-3">
 
         {/* portfolio card */}
         <div className = "relative overflow-hidden " style={{ height: 'calc(100vw / 3)' }}

@@ -1,3 +1,0 @@
-in projects conponent, make images crop to the size of each project banner. 
-make the height of each div the same as the full width / 3
-make the width and height of the threejs component the same as the container (width = 1/2 of viewport width)

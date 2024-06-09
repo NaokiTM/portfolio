@@ -2,11 +2,15 @@ import React from "react";
 import contact from "../assets/contact.jpg"
 
 const Contact = () => {
+
+
+
+
   return (
     <div className="relative text-black">
       
       <div className="flex justify-center p-4 pt-8 text-2xl font-bold">
-        <img className="w-[50vw] items-center justify-center" src = {contact}></img>
+        <img className="md:w-[50vw] sm:w-[100vw] items-center justify-center" src = {contact}></img>
       </div>
 
       <div className="grid w-[100%] items-center gap-3 p-5 pl-[25%]">
