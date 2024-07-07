@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
-import jupiterTexture from '../assets/jupiter.JPG';
+import jupiterTexture from '../assets/planet.jpg';
 
 const ThreeScene = ({ width, height }) => {
   const mountRef = useRef(null);

@@ -36,7 +36,7 @@ const Bio = () => {
       )}
       </div>
       <div className="sm:pt-4 md:pt-0">
-        <Typed strings={['Hey I\'m Naoki, a first year CS student. If you want to contact me, drop me a message via email at the bottom of this page. (Jupiter is my favourite planet by the way!)']} />
+        <Typed strings={['Hey I\'m Naoki, a first year CS student. If you want to contact me, drop me a message via email at the bottom of this page.']} />
         <button style={{ width: isMobile ? 'calc(100vw - 32px)' : 'calc(50vw - 32px)'}} className=" bg-white text-black p-1 mt-2 rounded-md text-base" onClick = {toggleAniVis}> {aniVis ? "hide planet" : "load planet"} </button>
         <img class = "pt-4" src={skills}></img>
       </div>
