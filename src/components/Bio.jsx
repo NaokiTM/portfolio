@@ -4,7 +4,6 @@ import ThreeScene from "./ThreeScene";
 import DeviceDetector from "./DeviceDetector";
 import skills from "../assets/skills.jpg"
 
-
 const Bio = () => {
   const [aniVis, setAniVis] = useState(false);
 
