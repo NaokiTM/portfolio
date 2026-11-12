@@ -36,15 +36,24 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: row;
     top: 1px;
     box-sizing: border-box;
-    width: 100%;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
-    border-bottom: 1px solid black;
     background-color: white;
     box-shadow: 0 -1px 0 white;
+}
+
+
+#navbar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: calc(var(--gutter) - 1px);   /* starts on the spacer's border so the corner joins */
+  right: calc(var(--gutter) - 1px);
+  height: 1px;
+  background: black;
 }
 
 
@@ -55,6 +64,13 @@ h1, h2, h3, h4, h5, h6 {
 
 #left-spacer  { border-right: var(--line); }
 #right-spacer { border-left: var(--line); }
+
+#center-content {
+  font-family: 'Redaction 50', monospace;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
 
 .panel {
   position: relative;
@@ -93,6 +109,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 0.815;
 }
 
+
 #description {
   position: absolute;
   top: -1px;
@@ -114,18 +131,88 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
 }
-
 .project {
-    min-width: 0;
-    min-height: 0;
-    overflow: auto;
-    border-bottom: var(--line);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; 
+  position: relative;
+  display: block;
+  min-width: 0;
+  min-height: 0;
+  color: black;
+  text-decoration: none;
 }
 
-.project:not(:nth-child(3n)) {
-    border-right: var(--line);
+.thumb {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;            /* clip here, not on .project, so the connector lines survive */
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(1) contrast(1.1);
+  transition: filter .4s, transform .6s;
 }
 
+.caption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: white;
+  border-top: var(--line);
+  font-family: 'Typo Mono', monospace;
+  font-size: 14px;
+  transform: translateY(100%);
+  transition: transform .25s;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    background: white;
+    text-align: center;
+    padding-top: 5px;
+    font-family: 'Redaction 50', serif;
+    font-weight: 800;
+    font-size: 25px;
+}
+
+html.has-cursor,
+html.has-cursor * {
+  cursor: none !important;
+}
+
+#cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 20px;               /* crosshair size */
+  height: 20px;
+  margin: -10px 0 0 -10px;   /* half the size, so the centre sits on the pointer */
+  pointer-events: none;
+  z-index: 3000;
+  opacity: 0;
+  mix-blend-mode: difference; /* stays visible over both white and images */
+  transition: opacity .2s;
+}
+
+#cursor::before,
+#cursor::after {
+  content: '';
+  position: absolute;
+  background: white;
+}
+
+#cursor::before {
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    transform: translateX(-50%);
+}
+
+#cursor::after {
+    top: 50%;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    transform: translateY(-50%);
+}
