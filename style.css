@@ -190,19 +190,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #name > :nth-child(1) {
-    color: rgb(235, 179, 159);
-    font-family: 'redaction 20';
-    color: transparent; 
-    -webkit-text-stroke: 3px whitesmoke;
-    mix-blend-mode: difference;
+  font-family: 'redaction 20';
+  color: transparent;
+  -webkit-text-stroke: 3px whitesmoke;
+  mix-blend-mode: difference;
+  letter-spacing: -5px;
 }
-
 
 #name > :nth-child(2) {
-    color: transparent; 
-    -webkit-text-stroke: 1.5px whitesmoke;
-    mix-blend-mode: difference;
+  color: transparent;
+  -webkit-text-stroke: 1.5px whitesmoke;
+  mix-blend-mode: difference;
+  letter-spacing: 1px;
 }
+
 
 #description {
   position: absolute;
