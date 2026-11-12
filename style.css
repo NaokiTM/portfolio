@@ -16,8 +16,13 @@
   --nav-h: 60px;
   --gutter: 60px;
   --line: 1px solid var(--color);
-  --background: #000000;
-  --color: whitesmoke;
+  --background: white;
+  --color: rgb(41, 41, 41);
+}
+
+* {
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 /* incorporate the borders into the sizing for ease  */
@@ -85,10 +90,11 @@ h1, h2, h3, h4, h5, h6 {
 
 
 #center-content {
-  font-family: 'Redaction 50', monospace;
-  font-size: 40px;
-  font-weight: 800;
+  font-family: 'Redaction', monospace;
+  font-size: 30px;
+  font-weight: 600;
   letter-spacing: -1px;
+  padding: 10px;
 }
 
 .panel {
@@ -104,11 +110,17 @@ h1, h2, h3, h4, h5, h6 {
 
 
 #panel1 {
-  border-top: none;
-  --xh: 120px;       /* length of each line */
-  --spins: 2;        /* number of full rotations on load */
-  --iri: #c4d9f2, #f0eaff 14%, #b9c5f5 30%, #e5d5f5 46%,
-         #b5e8ed 62%, #d5f5e8 74%, #f5eafa 88%, #c4d9f2;
+    border-top: none;
+    --xh: 120px;       /* length of each line */
+    --spins: 2;        /* number of full rotations on load */
+    --iri: #f2a7c9,          /* pink */
+        #f7bcd8 14%,      /* light pink */
+        #d4b0f5 30%,      /* lavender */
+        #b9a4f2 44%,      /* light violet */
+        #a9c3f7 58%,      /* soft blue */
+        #c9b3f5 72%,      /* lilac */
+        #f4b0d6 86%,      /* pink */
+        #f2a7c9;          /* same as the first stop, so the loop is seamless */
 }
 
 #panel1::before {
@@ -120,8 +132,8 @@ h1, h2, h3, h4, h5, h6 {
   height: calc(var(--xh) + 1px);
   pointer-events: none;
   background:
-    linear-gradient(180deg, var(--iri)) center / 1px 100% no-repeat,   /* vertical line */
-    linear-gradient(90deg,  var(--iri)) center / 100% 1px no-repeat;   /* horizontal line */
+    linear-gradient(var(--color), var(--color)) center / 1px 100% no-repeat,   /* vertical line */
+    linear-gradient(var(--color), var(--color)) center / 100% 1px no-repeat;   /* horizontal line */
   animation: xh-spin 2.4s cubic-bezier(.65, 0, .35, 1) .3s;
 }
 
@@ -150,6 +162,7 @@ h1, h2, h3, h4, h5, h6 {
 /* only for reduced motion users */
 @media (prefers-reduced-motion: reduce) {
   #panel1::before { animation: none; }
+  #name > :nth-child(1) { animation: none; }
 }
 
 
@@ -183,25 +196,49 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     padding-left: 30px;
-    padding-bottom: 20px;
-    font-family: 'Erigo', serif;
+    padding-bottom: 60px;
+    font-family: 'redaction 20', serif;
     font-size: 200px;
     line-height: 0.8;
 }
 
 #name > :nth-child(1) {
+  align-self: flex-start;      /* shrink to the word so the gradient spans just NAOKI */
+  padding: .08em .1em;         /* room so the tight line-height doesn't clip the gradient */
+  margin: -.08em -.1em;        /* cancels the padding, so the layout doesn't move */
   font-family: 'redaction 20';
-  color: transparent;
-  -webkit-text-stroke: 3px whitesmoke;
-  mix-blend-mode: difference;
   letter-spacing: -5px;
+  color: #000000;              /* fallback */
+  background:
+    linear-gradient(105deg, transparent 35%, rgba(255, 255, 255, .55) 50%, transparent 65%)
+      0 0 / 250% 100% no-repeat,                                  /* moving sheen */
+    linear-gradient(100deg, var(--iri)) 0 0 / 200% 100% repeat-x; /* iridescent base */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: iridescent 10s linear infinite;
 }
 
 #name > :nth-child(2) {
-  color: transparent;
-  -webkit-text-stroke: 1.5px whitesmoke;
-  mix-blend-mode: difference;
-  letter-spacing: 1px;
+  align-self: flex-start;      /* shrink to the word so the gradient spans just NAOKI */
+  padding: .25em .1em;
+  margin: -.25em -.1em;
+  font-family: 'redaction 20';
+  letter-spacing: -5px;
+  color: #000000;              /* fallback */
+  background:
+    linear-gradient(105deg, transparent 35%, rgba(255, 255, 255, .55) 50%, transparent 65%)
+      0 0 / 250% 100% no-repeat,                                  /* moving sheen */
+    linear-gradient(100deg, var(--iri)) 0 0 / 200% 100% repeat-x; /* iridescent base */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: iridescent 10s linear infinite;
+}
+
+@keyframes iridescent {
+  from { background-position: 150% 0, 0 0; }
+  to   { background-position: -50% 0, 200% 0; }
 }
 
 
@@ -213,8 +250,8 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 20px;
   border: var(--line);
-  font-family: 'Redaction 50', serif;
-  font-size: 25px;
+  font-family: 'Redaction', serif;
+  font-size: 27px;
   font-weight: 800;
   letter-spacing: -1px;
 }
@@ -241,7 +278,7 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;            /* clip here, not on .project, so the connector lines survive */
   background-size: cover;
   background-position: center;
-  /* filter: grayscale(1) contrast(1.1); */
+  filter: blur(1px) brightness(90%);
   transition: filter .4s, transform .6s;
 }
 
@@ -294,10 +331,10 @@ footer {
     width: 100%;
     background: var(--background);
     text-align: center;
+    font-family: 'Redaction', serif;
+    font-weight: 500;
+    font-size: 17px;
     padding-top: 5px;
-    font-family: 'Redaction 50', serif;
-    font-weight: 800;
-    font-size: 25px;
 }
 
 
