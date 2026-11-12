@@ -125,6 +125,23 @@ h1, h2, h3, h4, h5, h6 {
   animation: xh-spin 2.4s cubic-bezier(.65, 0, .35, 1) .3s;
 }
 
+#panel2::before,
+#panel2::after {
+  content: '';
+  position: absolute;
+  z-index: 1;                                /* keeps the lower arm above the footer's background */
+  bottom: calc(var(--nav-h) / -2 - 1px);     /* lower arm sticks out 50% of the navbar height */
+  width: calc(var(--gutter) + 1px);          /* +1px so there's a true centre pixel for the 1px lines */
+  height: calc(var(--nav-h) + 1px);
+  pointer-events: none;
+  background:
+    linear-gradient(var(--color), var(--color)) center / 1px 100% no-repeat,   /* vertical arm */
+    linear-gradient(var(--color), var(--color)) center / 100% 1px no-repeat;   /* horizontal arm */
+}
+
+#panel2::before { left:  calc(var(--gutter) / -2 - 1px); }
+#panel2::after  { right: calc(var(--gutter) / -2 - 1px); }
+
 @keyframes xh-spin {
   from { transform: rotate(0deg); }
   to   { transform: rotate(calc(var(--spins) * 360deg)); }
@@ -165,51 +182,25 @@ h1, h2, h3, h4, h5, h6 {
 #name {
     display: flex;
     flex-direction: column;
-    padding-left: 40px;
+    padding-left: 30px;
     padding-bottom: 20px;
     font-family: 'Erigo', serif;
-    font-size: 220px;
-    line-height: 0.77;
+    font-size: 200px;
+    line-height: 0.8;
 }
 
 #name > :nth-child(1) {
-    padding: .08em .1em;
-    margin: -.08em -.1em;
-  color: whitesmoke;                      /* fallback */
-  background:
-    /* layer 1: moving specular sheen */
-    linear-gradient(105deg, transparent 35%, rgba(255, 255, 255, .55) 50%, transparent 65%)
-      0 0 / 250% 100% no-repeat,
-    /* layer 2: iridescent base (first and last colour match, so it loops seamlessly) */
-    linear-gradient(100deg,
-        #c4d9f2,
-        #f0eaff 14%,
-        #b9c5f5 30%,
-        #e5d5f5 46%,
-        #b5e8ed 62%,
-        #d5f5e8 74%,
-        #f5eafa 88%,
-        #c4d9f2
-    )
-      0 0 / 200% 100% repeat-x;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: iridescent 10s linear infinite;
+    color: rgb(235, 179, 159);
+    font-family: 'redaction 20';
+    color: transparent; 
+    -webkit-text-stroke: 3px whitesmoke;
+    mix-blend-mode: difference;
 }
 
-@keyframes iridescent {
-  from { background-position: 150% 0, 0 0; }
-  to   { background-position: -50% 0, 200% 0; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  #name > :nth-child(1) { animation: none; }
-}
 
 #name > :nth-child(2) {
     color: transparent; 
-    -webkit-text-stroke: 1.6px whitesmoke;
+    -webkit-text-stroke: 1.5px whitesmoke;
     mix-blend-mode: difference;
 }
 
