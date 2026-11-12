@@ -16,6 +16,7 @@
         <div id="right-spacer" class="spacer"></div>
     </nav>
     <div id="panel1" class="panel">
+        <div id="location">Bristol, United Kingdom</div>
         <div id="hero">
             <h1 id="name">
                 <span>NAOKI</span>
@@ -31,26 +32,73 @@
     </div>
     <div id="panel2" class="panel">
         <div id="projects">
-            <a class="project" href="#">
+            <div class="project">
                 <div class="thumb" style="background-image: url('assets/diss.png');"></div>
-                <div class="caption"><span>01</span><span>Dissertation</span><span>↗</span></div>
-            </a>
-            <a class="project" href="#">
+                <div class="caption">
+                    <span class="caption-title">DDoS Detection and Mitigation using SDN</span>
+                    <ul class="caption-description">
+                        <li>Final year dissertation project for BSc Computer Science with Artificial Intelligence</li>
+                        <li>Used software-defined networking (SDN) with Mininet to simulate DDoS traffic</li>
+                        <li>Developed POX modules to detect and block malicious traffic</li>
+                        <li>Implemented machine-learning models using Scikit-learn and TensorFlow</li>
+                        <li>Investigated automated DDoS detection and mitigation within an SDN environment</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project">
                 <div class="thumb" style="background-image: url('assets/reader.png');"></div>
-                <div class="caption"><span>02</span><span>Portfolio</span><span>↗</span></div>
-            </a>
-            <a class="project" href="#">
+                <div class="caption">
+                    <span class="caption-title">Chat Reader</span>
+                    <ul class="caption-description">
+                        <li>EPUB and PDF reader with inline LLM assistance using Groq for exploring books in greater depth</li>
+                        <li>Multiple bookmarks make cross-referencing different sections easier for study</li>
+                        <li>Contextual explanations help explain smaller sections within the bigger picture</li>
+                        <li>A welcome summary recaps the book so far after time away</li>
+                        <li>AI-powered PDF text extraction can also summarise manga stories</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project">
                 <div class="thumb" style="background-image: url('assets/daw.png');"></div>
-                <div class="caption"><span>03</span><span>Portfolio 2</span><span>↗</span></div>
-            </a>    
-            <a class="project" href="#">
+                <div class="caption">
+                    <span class="caption-title">SynthaSonik</span>
+                    <ul class="caption-description">
+                        <li>A web-based DAW / DAW interface, loosely inspired by Logic Pro X</li>
+                        <li>Implemented multi-track audio playback and sample importing using the Web Audio API</li>
+                        <li>Used Svelte stores and writable stores to manage global and dynamic application state</li>
+                        <li>Used Tailwind CSS to rapidly develop and style a complex interactive interface</li>
+                        <li>Some backend features yet to be implemented due to scale</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project">
                 <div class="thumb" style="background-image: url('assets/chess.png');"></div>
-                <div class="caption"><span>04</span><span>Portfolio 3</span><span>↗</span></div>
-            </a>
-            <a class="project" href="#">
+                <div class="caption">
+                    <span class="caption-title">Knights Tour Solver</span>
+                    <ul class="caption-description">
+                        <li>A graphical solver for the classic Knight's Tour problem</li>
+                        <li>Implemented Warnsdorff's heuristic to greedily select the most constrained next move</li>
+                        <li>Visualised available moves and the knight's previous path using Pygame</li>
+                        <li>Ability for the user to select a desired board size</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project">
                 <div class="thumb" style="background-image: url('assets/dots.png');"></div>
-                <div class="caption"><span>05</span><span>Portfolio 4</span><span>↗</span></div>
-            </a>
+                <div class="caption">
+                    <span class="caption-title">Dotfiles</span>
+                    <ul class="caption-description">
+                        <li>Personal Linux dotfiles for my current Arch Linux setup</li>
+                        <li>Configured around Hyprland and the Kitty terminal</li>
+                        <li>Uses GNU Stow to manage and symlink configuration files</li>
+                        <li>Includes installation instructions in the README</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
     <footer id="footer">
