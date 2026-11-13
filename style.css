@@ -41,19 +41,54 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #navbar {
-    position: sticky;
-    flex-direction: row;
-    top: 1px;
-    box-sizing: border-box;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-    box-shadow: 0 -1px 0 var(--background);
-    background: var(--background);
+  position: sticky;
+  top: 1px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: var(--nav-h);
+  background: var(--background);
+  box-shadow: 0 -1px 0 var(--background);
 }
 
+.spacer {
+  flex: none;
+  width: var(--gutter);
+  align-self: stretch;
+}
+
+#location,
+#social-icons {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 0 30px;
+}
+
+#location {
+  font-family: 'Typo Mono', monospace;
+  font-size: 18px;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+#center-content {
+  flex: none;
+  padding: 0 20px;
+  font-family: 'Redaction', serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -1px;
+  white-space: nowrap;
+}
+
+#social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;   /* pushes the icons and button to the right */
+  gap: 20px;
+}
 
 #navbar::after {
   content: '';
@@ -65,11 +100,111 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--color);
 }
 
-
-#navbar {
+#social-icons {
     display: flex;
-    width: 100%;
-    height: var(--navbar-height);
+    align-items: center;
+    gap: 20px;
+}
+
+#social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#social-icons img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+#social-icons .social {
+  justify-content: flex-start;
+  height: 36px;
+  padding: 0 2px;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  color: var(--background);
+  text-decoration: none;
+  font-family: 'Typo Mono', monospace;
+  font-size: 15px;
+  letter-spacing: .5px;
+  white-space: nowrap;
+  transition: background .25s, border-color .25s, padding .3s ease;
+}
+
+#social-icons .social img {
+  flex: none;
+  transition: width .3s ease, height .3s ease, filter .25s;
+}
+
+/* the label is collapsed until hover */
+#social-icons .social span {
+  max-width: 0;
+  margin-left: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-width .3s ease, margin-left .3s ease, opacity .25s;
+}
+
+/* hover: becomes a pill like the CV button, icon shrinks to the left, label slides out */
+#social-icons .social:hover,
+#social-icons .social:focus-visible {
+  padding: 0 16px 0 12px;
+  border-color: black;
+  background: black;
+  outline: none;
+}
+
+#social-icons .social:hover img,
+#social-icons .social:focus-visible img {
+  width: 18px;
+  height: 18px;
+  filter: invert(1);       /* dark icon becomes light on the black pill */
+}
+
+#social-icons .social:hover span,
+#social-icons .social:focus-visible span {
+  max-width: 100px;
+  margin-left: 8px;
+  opacity: 1;
+}
+
+#social-icons .social:active {
+    transform: scale(0.96);
+}
+
+
+
+#cvbutton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+
+    border: 1px solid black;
+    border-radius: 100px;
+    background: black;
+    color: var(--background);
+
+    height: 36px;
+    padding: 0px 18px;
+    font-family: 'Typo Mono', monospace;
+    font-size: 15px;
+    letter-spacing: .5px;
+
+    cursor: pointer;
+    transition: background .25s, color .25s, transform .25s;
+}
+
+#cvbutton:hover {
+    background: var(--background);
+    color: var(--color);
+}
+
+#cvbutton:active {
+    transform: scale(.96);
 }
 
 #left-spacer::after,
@@ -87,15 +222,6 @@ h1, h2, h3, h4, h5, h6 {
 
 #left-spacer::after  { left:  calc(var(--gutter) / 2 - 1px); }
 #right-spacer::after { right: calc(var(--gutter) / 2 - 1px); }
-
-
-#center-content {
-  font-family: 'Redaction', monospace;
-  font-size: 30px;
-  font-weight: 600;
-  letter-spacing: -1px;
-  padding: 10px;
-}
 
 .panel {
   position: relative;
@@ -175,14 +301,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: -1px;
 }
 
-#location { 
-    padding-top: 16px; 
-    margin-left: 16px; 
-    font-family: 'Typo Mono', monospace; 
-    font-size: 18px; 
-    letter-spacing: 0; 
-}
-
 #hero {
     position: relative;
     width: 100%;
@@ -196,7 +314,9 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     padding-left: 30px;
-    padding-bottom: 60px;
+
+    /* change name and bottom gap */
+    padding-bottom: 20px;  
     font-family: 'redaction 20', serif;
     font-size: 200px;
     line-height: 0.8;
@@ -246,14 +366,27 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: -1px;
   right: -1px;
-  width: 400px;
+  width: 450px;
   margin: 0;
-  padding: 20px;
+  padding: 30px;
   border: var(--line);
   font-family: 'Redaction', serif;
-  font-size: 27px;
+  font-size: 28px;
   font-weight: 800;
   letter-spacing: -1px;
+}
+
+#description::after {
+  content: '';
+  position: absolute;
+  left:   calc(var(--gutter) / -2 - 1px);    /* -1px because offsets are measured inside the border */
+  bottom: calc(var(--nav-h) / -2 - 1px);
+  width:  calc(var(--gutter) + 1px);         /* +1px so there's a true centre pixel for the 1px lines */
+  height: calc(var(--nav-h) + 1px);
+  pointer-events: none;
+  background:
+    linear-gradient(var(--color), var(--color)) center / 1px 100% no-repeat,   /* vertical arm */
+    linear-gradient(var(--color), var(--color)) center / 100% 1px no-repeat;   /* horizontal arm */
 }
 
 #projects {
@@ -270,6 +403,21 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 0;
   color: var(--color);
   text-decoration: none;
+}
+
+.project {
+    border-right: 1px solid var(--color);
+    border-bottom: 1px solid var(--color);
+}
+
+/* No right border on cards 3 and 6 */
+.project:nth-child(3n) {
+    border-right: none;
+}
+
+/* No bottom border on cards 4, 5 and 6 */
+.project:nth-child(n+4) {
+    border-bottom: none;
 }
 
 .thumb {
@@ -331,14 +479,16 @@ footer {
     width: 100%;
     background: var(--background);
     text-align: center;
-    font-family: 'Redaction', serif;
+    font-family: 'Typo mono', monospace;
     font-weight: 500;
     font-size: 17px;
     padding-top: 5px;
 }
 
-
-
+.normal-font {
+    font-family: sans-serif;
+    letter-spacing: normal;
+}
 
 
 html.has-cursor,
